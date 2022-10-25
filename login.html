@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <div class="max-w-xl mx-auto justify-center items-center px-5 py-12">
+        <form class="p-10 bg-white rounded-xl shadow-inner space-y-12" action="">
+            <h1 class="text-4xl font-bold text-center my-12">
+                Welcome
+            </h1>
+            <div class="text-4xl font-bold items-center">
+                <img src="https://thumbs.dreamstime.com/b/letter-logo-design-simple-modern-logo-design-letter-very-simple-black-background-color-183193944.jpg"
+                    alt="" class="mx-auto w-10 h-10">
+            </div>
+            <div class="flex flex-col space-y-2">
+                <label class="text-sm text-darkBlue" for="email">Email</label>
+                <div class="flex items-center border-b border-teal-500">
+                    <input
+                        class="appearance-none bg-transparent border-none w-96 px-3 py-1 text-gray-700 leading-tight focus:outline-none"
+                        type="text" placeholder="jondoe@example.com">
+                </div>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <label class="text-sm text-darkBlue" for="password">Password</label>
+                <div class="relative" x-data="{ isVisible: false }">
+                    <div class="absolute flex right-4 items-center h-full">
+                        <button class="rounded-md px-1 block focus:outline-none"
+                            @click="$dispatch('visibility'); isVisible = !isVisible;">
+                            <div x-show="isVisible">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div x-show="!isVisible">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="flex items-center border-b border-teal-500">
+                        <input type="text" placeholder="password" minlength="5"
+                            class="appearance-none bg-transparent border-none w-96 px-3 py-3 text-gray-700 leading-tight focus:outline-none text-sm first-letter:invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 border-transparent focus:border-transparent focus:ring-0 peer"
+                            @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
+                    </div>
+                    </label>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <button
+                    class="w-full px-10 py-2  bg-gradient-to-r from-teal-500 via-blue-500 to-purple-800 text-white rounded-full"
+                    type="submit">
+                    Login
+                </button>
+            </div>
+            <p class="text-center text-darkBlue">
+                <a href="#">Forgot password?</a>
+            </p>
+        </form>
+    </div>
+    <style>
+        body {
+            background-color: #6499ce
+        }
+    </style>
+</body>
+
+</html>

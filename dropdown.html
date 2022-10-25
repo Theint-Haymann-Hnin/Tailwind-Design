@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop down meanu</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+<script defer src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>>
+  </head>
+  <body>
+    <div class="p-10">
+        <div class="dropdown inline-block relative">
+            <svg class="h-6 w-8 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="1" />  <circle cx="12" cy="19" r="1" />  <circle cx="12" cy="5" r="1" /></svg>
+            <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                <li class=""><a class="rounded-t bg-gray-200  hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Edit</a></li>
+                <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Delete</a></li>
+              </ul>
+        </div>
+
+        <!-- <div class="dropdown inline-block relative">
+          <button class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+            <span class="mr-1">Dropdown</span>
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+          </button>
+          <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
+            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
+          </ul>
+        </div> -->
+      
+      </div>
+      <!-- <style>
+        .dropdown:hover .dropdown-menu {
+        display: block;
+                                        }
+      </style> -->
+    <!-- <div class="relative">
+        <button class="block p-2 bg-white bg-gray-100 rounded-md ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+    
+        </button>
+        <div class="absolute right-0 w-48 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                Dropdown List 1
+            </a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                Dropdown List 2
+            </a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
+                Dropdown List 3
+            </a>
+        </div>
+    </div> -->
+    <main class="flex min-h-screen w-full items-center justify-center">
+      <!-- component -->
+      <div x-data="select" class="relative w-[30rem]" @click.outside="open = false">
+          <!-- trigger button -->
+          <button type="button" @click="toggle"
+              class="flex w-full items-center justify-between rounded bg-white p-2 ring-1 ring-gray-300"
+              :class="(open) && 'ring-blue-600'">
+              <span x-text="(language == '') ? 'Choose language' : language"></span>
+              <span class="text-2xl w-5 h-5 grid place-content-center"><i class='bx bx-chevron-down'></i></span>
+          </button>
+  
+          <!-- list items -->
+          <ul class="z-2 absolute mt-2 w-full rounded bg-gray-50 ring-1 ring-gray-300" x-show="open">
+              <li class="cursor-pointer select-none p-2 hover:bg-gray-200" @click="setLanguage('Python')">
+                  Python
+              </li>
+              <li class="cursor-pointer select-none p-2 hover:bg-gray-200" @click="setLanguage('PHP')">
+                  PHP
+              </li>
+              <li class="cursor-pointer select-none p-2 hover:bg-gray-200" @click="setLanguage('C#')">
+                  C#
+              </li>
+          </ul>
+      </div>
+  </main>
+  <label for="countries_multiple" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select an option</label>
+<select multiple id="countries_multiple" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <option selected>Choose countries</option>
+  <option value="US">United States</option>
+  <option value="CA">Canada</option>
+  <option value="FR">France</option>
+  <option value="DE">Germany</option>
+</select>
+    </div>
+    <script>
+      document.addEventListener("alpine:init", () => {
+          Alpine.data("select", () => ({
+              open: false,
+              language: "",
+  
+              toggle() {
+                  this.open = !this.open;
+              },
+  
+              setLanguage(val) {
+                  this.language = val;
+                  this.open = false;
+              },
+          }));
+      });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Page </title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="flex flex-col fixed z-30 w-full bg-white border-b-2 border-gray-200">
+        <div class="px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="https://thumbs.dreamstime.com/b/letter-logo-design-simple-modern-logo-design-letter-very-simple-black-background-color-183193944.jpg"
+                            alt="" class="mx-auto w-10 h-10">
+                    </a>
+
+                    <a href="#" class="flex items-center font-bold mx-20 px-20">
+                        <p class="">CRM |User (34)</p>
+                    </a>
+
+                </div>
+                <div class="flex items-center">
+                    <div class="mr-6 lg:block">
+                        <form action="#">
+                            <label class="sr-only">Search</label>
+                            <div class="relative mt-1 lg:w-64">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                    <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input type="text" name="name"
+                                    class=" border  text-gray-900 sm:text-sm rounded-lg focus:outline-none focus:ring-1 block w-full pl-10 p-2.5"
+                                    placeholder="Search Active Users">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="pt-12 lg:flex">
+        <div class="flex flex-col w-full px-4 py-8 overflow-y-auto border-b lg:border-r lg:h-screen lg:w-40 md:w-50">
+            <div class="flex flex-col justify-between mt-6">
+                <aside>
+                    <ul>
+                        <li>
+                            <a class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-md " href="#">
+                                <svg class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                                href="#">
+                                <svg class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                                href="#">
+                                <svg class="h-8 w-8 text-gray-500" width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                    <path d="M16 11l2 2l4 -4" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                                href="#">
+                                <svg class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                                href="#">
+                                <svg aria-hidden="true"
+                                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+        <div
+            class="flex flex-col w-full px-4 py-8 overflow-y-auto border-b lg:border-r lg:h-screen lg:w-full md:full sm:full">
+            <div class="flex flex-col">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-5s">
+                        <div class="">
+                            <table class="min-w-full">
+                                <thead class="bg-sky-400 border-b">
+                                    <tr>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                            No
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                            Name
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                            Email
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                            Phone
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                            Address
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            testing
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            testing@gmail.com
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            086767655543
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            Yangon
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            testing
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            testing@gmail.com
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            086767655543
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            Yangon
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            testing
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            testing@gmail.com
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            086767655543
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            Yangon
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center py-10">
+                <div class="flex justify-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="flex list-style-none">
+                            <li class="page-item"><a
+                                    class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 focus:shadow-none"
+                                    href="#">Previous</a></li>
+                            <li class="page-item"><a
+                                    class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                                    href="#">1</a></li>
+                            <li class="page-item"><a
+                                    class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                                    href="#">2</a></li>
+                            <li class="page-item"><a
+                                    class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                                    href="#">3</a></li>
+                            <li class="page-item"><a
+                                    class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+                                    href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
